@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'dss.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ejwcdada', 
-        'USER': 'ejwcdada', 
-        'PASSWORD': 'NEli1PMgqMgHO0eojeD_0WV2MX8kXi8A',
-        'HOST': 'arjuna.db.elephantsql.com', 
+        'NAME': 'dss_facemask', 
+        'USER': 'postgres', 
+        'PASSWORD': 'ariasatya',
+        'HOST': 'localhost', 
         'PORT': '5432',
     }
 }

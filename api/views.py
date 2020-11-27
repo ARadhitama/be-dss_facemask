@@ -62,16 +62,13 @@ def get_pelanggaran(request):
     except Exception as e:
         return JsonResponse({'message': str(e)})
 
-    print("1")
-    print(pelanggaran[0].camera.id)
-    print("2")
     response = []
 
     for data in pelanggaran:
         response.append({
-            'kamera': data.camera.id,
-            'lokasi': data.camera.lokasi,
-            'waktu': data.waktu__time
+            'kamera': data.kamera_id,
+            'lokasi': data.kamera.lokasi,
+            'waktu': data.waktu.time().replace(microsecond=0).isoformat()
         })
 
     return JsonResponse({"data": response}, status=200)
