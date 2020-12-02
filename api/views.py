@@ -11,7 +11,6 @@ from api.db_manager import *
 
 class DashboardView(View):
 
-    @csrf_exempt
     def get(self, *args, **kwargs):
         total_pengunjung = get_total_pengunjung()   
         total_pelanggaran = get_total_pelanggaran()
@@ -25,7 +24,6 @@ class DashboardView(View):
             "pelanggaran": pelanggaran
         }, status=200)
     
-    @csrf_exempt
     def post(self, request, *args, **kwargs):
         try:
             data = json.loads(request.body)
