@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -77,10 +78,10 @@ WSGI_APPLICATION = 'dss.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dss_facemask', 
-        'USER': 'postgres', 
-        'PASSWORD': 'ariasatya',
-        'HOST': 'localhost', 
+        'NAME': 'd63ti32g1grsb7', 
+        'USER': 'zxtaogkjzdiboo', 
+        'PASSWORD': '291277e20c43d1b8170b103af5a46fdf91d8c5d57f924fb1397a5ae0550c6cad',
+        'HOST': 'ec2-3-220-23-212.compute-1.amazonaws.com', 
         'PORT': '5432',
     }
 }
@@ -123,3 +124,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
